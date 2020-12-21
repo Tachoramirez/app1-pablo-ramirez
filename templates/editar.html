@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block content %}
+<br>
+<br>
+<div class="container">
+	<center><h1>Actualizar Registro</h1></center>
+	<div class="row">
+		<div class="col-md-3" ></div>
+		<form method="POST" action="{{ url_for('actualizar')}}">
+			<div class="col-md-6" >
+				<div class="form-group">
+					<input type="hidden" name="id" id="id" value="{{ alumno.id }}">
+					<input required="" type="text" name="nombreE" id="nombreE" value="{{ alumno.nombre }}" class="form-control form-control-sm" placeholder="Actualiza nombre"><br>
+					<center>
+					<input required="" type="text" name="apellidoE" id="apellidoE" value="{{ alumno.apellido }}" class="form-control form-control-sm" placeholder="Actualiza apellido"><br>
+					<center>
+					<button type="submit" class="btn" name="button">Continuar</button>
+					<a href="/../acerca" type="button" class="btn red">Cancelar</a>
+					</center>
+				</div>
+			</div>		
+		</form>
+		<div class="col-md-3" ></div>
+	</div>
+</div>
+	
+{% endblock %}

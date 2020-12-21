@@ -1,0 +1,29 @@
+{% extends 'material/base.html' %}
+{% import "material/utils.html" as util %}
+{% import "material/wtf.html" as wtf %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+	{% block navbar %}	
+		<div class="navbar-fixed">
+			<nav class="green lighten-4">
+			   	<div class="container">
+			   		<a href="/" title="Home" class="icono"><img height="60px" width="60px"  src="{{url_for('static',filename='flask.png')}}"></a>
+			     		<ul id="nav-mobile" class="right hide-on-med-and-down">
+			        		<li><a class="blue-text text-darken-2" href="acerca" title="Acerca">Acerca</a></li>
+			        		<li><a class="blue-text text-darken-2" href="#">Materia</a></li>
+			        		<li><a class="blue-text text-darken-2" href="" title="Log out">Más</a></li>
+			      		</ul>
+			   	</div>
+			</nav>
+		</div>
+	{% endblock navbar %}
+
+	{% block content %}
+		
+	{% endblock content %}
+
+{% endblock body %}
+
+

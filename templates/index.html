@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %} Inicio {% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 50px;">	
+	<div class="row">
+		{% for elemento in variable %}
+			<div class="col s3 m3"><a href="">{{elemento}}</a></div>
+		{% endfor%}
+	</div>
+
+
+  	<div class="row">
+		<div class="col-md-12">
+			<img width="100%" height="300px" src="{{url_for('static',filename='foto1.jpg')}}">
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col-md-12">
+			<center>
+				<h1> Hola Maestra, este es mi primer ejemplo </h1>
+			</center>
+		</div>
+	</div><br>	
+	<div class="row">
+		<div class="col-md-2" ></div>
+		<div class="col-md-4">
+		{% if "Acerca" in variable %}
+			<p>Acerca existe en la lista</p>
+		{% else %}
+			<p>Acerca no existe en la lista</p>
+		{% endif %}	
+		</div>	
+		<div class="col-md-4">
+			<p> Asignatura de especialidad</p>
+		</div>
+		<div class="col-md-2" ></div>
+	</div><br><br>	
+	<div class="row">
+		<div class="col-md-3" ></div>
+		<form method="POST">
+			<div class="col-md-6" >
+				<div class="form-group">
+					<input required="" type="text" name="nombre" class="form-control form-control-sm" placeholder="Ingresa nombre"><br>
+					<center>
+					<input required="" type="text" name="apellido" class="form-control form-control-sm" placeholder="Ingresa apellido"><br>
+					<center>
+					<button type="submit" class="btn" name="button">Registrarse</button>
+					</center>
+				</div>
+			</div>		
+		</form>
+		<div class="col-md-3" ></div>
+	</div><br>
+</div>
+{% endblock %}
+
+

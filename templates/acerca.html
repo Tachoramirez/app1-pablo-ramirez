@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} Acerca {% endblock %}
+
+
+{% block content %}
+		<center>
+			<br>
+			<div class="container">
+				<table class="striped centered">
+					<thead class="">
+						<tr>
+							<th>#</th>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th>Acciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for a in datos %}
+						<tr>
+							<th scope="row">{{a.id}}</th>
+							<td>{{a.nombre}}</td>
+							<td>{{a.apellido}}</td>
+							<td>
+								<a href="/editar/{{ a.id }}"  class="btn">Editar</a>
+								<a href="/eliminar/{{ a.id }}" class="btn red">Eliminar</a>
+							</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</center>
+{% endblock %}
