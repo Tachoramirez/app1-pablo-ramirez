@@ -11,7 +11,7 @@ Material(app)
 
 
 #app.config['SQLALCHEMY_DATABASE_URI']='postgresql+psycopg2://postgres:12345@localhost:5432/escolares'
-app.config['SQLALCHEMY_DATABASE_URI']='postgres://iszrqvkmozunly:0e4f521e1026349c734537cfbe1d4c4d4b5c957ee30530273741115f9fdc6912@ec2-52-22-238-188.compute-1.amazonaws.com:5432/d4161cev4q8ko6'
+app.config['SQLALCHEMY_DATABASE_URI']='postgres://rimkznaxssouex:46e790c0ab304579efa46be64767250879a73dae81ad81c8c84ffb617d584f20@ec2-3-220-98-137.compute-1.amazonaws.com:5432/denn5tm1m7455d'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 db = SQLAlchemy(app)
 
